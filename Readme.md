@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Maksim Baravy](https://up.htmlacademy.ru/htmlcss/20/user/388127).
-* Наставник: `Неизвестно`.
+* Наставник: [Владимир Войтенко](https://htmlacademy.ru/profile/id440305).
 
 ---
 
