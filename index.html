@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Глейси</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -42,14 +45,14 @@
     </nav>
     <div class="user-block-wrapper">
       <div class="user-block">
-        <div class="user-block-item">
+        <div class="user-block-search">
           <a class="search-btn" href="#" aria-label="Поиск"></a>
           <div class="search">
             <label class="visually-hidden" for="user-block-search">Поиск по сайту</label>
             <input type="search" id="user-block-search" placeholder="Что ищем?">
           </div>
         </div>
-        <div class="user-block-item">
+        <div class="user-block-login">
           <a class="login-btn" href="#">Вход</a>
           <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="login-form-email">Электронная почта (обязательно)</label>
@@ -57,7 +60,7 @@
             <label class="visually-hidden" for="login-form-password">Пароль (обязательно)</label>
             <input type="password" name="password" id="login-form-password" placeholder="Пароль" aria-required="true" required>
             <div class="login-form-bottom">
-              <button type="submit">Войти</button>
+              <button class="btn" type="submit">Войти</button>
               <ul class="reg-links">
                 <li><a href="#">Забыли пароль?</a></li>
                 <li><a href="#">Новая регистрация</a></li>
@@ -65,7 +68,7 @@
             </div>
           </form>
         </div>
-        <div class="user-block-item">
+        <div class="user-block-cart">
           <a class="cart-btn" href="#" aria-label="Корзина">Пусто</a>
         </div>
       </div>
@@ -81,17 +84,17 @@
 
     <section class="slider">
       <ul class="slider-inner">
-        <li class="slide-one">
+        <li class="slide slide-one">
           <img src="img/icecream-slide-1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="647" height="584">
           <h2>Крем-брюле и пломбир с малиновым джемом</h2>
           <a class="btn" href="#">Давайте оба!</a>
         </li>
-        <li class="slide-two">
+        <li class="slide slide-two">
           <img src="img/icecream-slide-2.png" alt="Шоколадный пломбир и лимонный сорбет" width="644" height="582">
           <h2>Шоколадный пломбир и лимонный сорбет</h2>
           <a class="btn" href="#">Давайте оба!</a>
         </li>
-        <li class="slide-three">
+        <li class="slide slide-three">
           <img src="img/icecream-slide-3.png" alt="Пломбир с помадкой и клубничный щербет" width="639" height="582">
           <h2>Пломбир с помадкой и клубничный щербет</h2>
           <a class="btn" href="#">Давайте оба!</a>
@@ -173,7 +176,7 @@
         <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="subscription">Электронная почта (обязательно)</label>
           <input type="email" id="subscription" name="email" placeholder="Электронная почта" aria-required="true" required>
-          <button type="submit">Отправить</button>
+          <button class="btn" type="submit">Отправить</button>
         </form>
       </div>
     </section>
@@ -181,6 +184,18 @@
     <section class="map">
       <h2 class="visually-hidden">Наше месторасположение</h2>
       <img src="img/map.jpg" alt="Наше месторасположение" width="1200" height="430">
+      <div class="map-feedback-block">
+        <div class="adress"> 
+          <p>Адрес главного офиса<br> и офлайн-магазина:</p>
+          <p class="bold">ул. Большая Конюшенная<br> 19/8, Санкт-Петербург</p>
+        </div>
+        <div class="phone-number">
+          <p>Для заказов по телефону:</p>
+          <p class="bold">8 812 450-25-25</p>
+          <p>(с 10 до 20 ежедневно)</p>
+        </div>
+        <a class="btn" href="#">Форма обратной связи</a>
+      </div>
     </section>
 
   </main>
@@ -201,7 +216,7 @@
     </ul>
     <div class="designby">
       <img src="img//svg/logo-htmlacademy.svg" alt="HTMLAcademy" width="108" height="39">
-      <p>Сделано в <a href="http://htmlacademy.ru">HTML Academy</a> © 2017</p>
+      <p>Сделано в <a class="htmlacademy-link" href="http://htmlacademy.ru">HTML Academy</a> © 2017</p>
     </div>
 
   </footer>
@@ -217,7 +232,7 @@
     <input type="email" id="feedback-form-email" name="email" placeholder="Ваша почта для ответа?" aria-required="true" required>
     <label class="visually-hidden" for="feedback-form-question">Напишите что-нибудь...</label>
     <textarea name="textarea" id="feedback-form-question" cols="30" rows="10" placeholder="Напишите что-нибудь..." aria-required="true" required></textarea>
-    <button type="submit">Отправить</button>
+    <button class="btn" type="submit">Отправить</button>
   </form>
   <button class="modal-close" type="button" aria-label="Закрыть"></button>
 </section>
