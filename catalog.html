@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Глейси - Каталог</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -13,13 +16,13 @@
       </a>
       <ul class="main-header-menu">
         <li class="main-menu-item">
-          <a class="main-menu-link" href="#">Каталог</a>
+          <a class="main-menu-link active" href="#">Каталог</a>
           <ul class="sub-menu">
             <li class="sub-menu-item">
               <a class="sub-menu-link" href="#1">Новинки</a>
             </li>
             <li class="sub-menu-item">
-              <a class="sub-menu-link">Сливочное</a>
+              <a class="sub-menu-link active">Сливочное</a>
             </li>
             <li class="sub-menu-item">
               <a class="sub-menu-link" href="#3">Щербеты</a>
@@ -42,14 +45,14 @@
     </nav>
     <div class="user-block-wrapper">
       <div class="user-block">
-        <div class="user-block-item">
+        <div class="user-block-search">
           <a class="search-btn" href="#" aria-label="Поиск"></a>
           <div class="search">
             <label class="visually-hidden" for="user-block-search">Поиск по сайту</label>
             <input type="search" id="user-block-search" placeholder="Что ищем?">
           </div>
         </div>
-        <div class="user-block-item">
+        <div class="user-block-login">
           <a class="login-btn" href="#">Вход</a>
           <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="login-form-email">Электронная почта (обязательно)</label>
@@ -57,7 +60,7 @@
             <label class="visually-hidden" for="login-form-password">Пароль (обязательно)</label>
             <input type="password" name="password" id="login-form-password" placeholder="Пароль" aria-required="true" required>
             <div class="login-form-bottom">
-              <button type="submit">Войти</button>
+              <button class="btn" type="submit">Войти</button>
               <ul class="reg-links">
                 <li><a href="#">Забыли пароль?</a></li>
                 <li><a href="#">Новая регистрация</a></li>
@@ -65,29 +68,31 @@
             </div>
           </form>
         </div>
-        <div class="user-block-item">
+        <div class="user-block-cart">
           <a class="cart-btn full" href="#" aria-label="Корзина">2 товара</a>
-          <table>
-            <caption class="visually-hidden">Ваши товары в корзине</caption>
-            <tr>
-              <td><button class="delete-btn" type="button" aria-label="Удалить товар"></button></td>
-              <td><img src="img/product/small/1.png" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
-              <td>Пломбир с апельсиновым джемом</td>
-              <td>1,5кг &#215; 200 руб.</td>
-              <td>300 руб.</td>
-            </tr>
-            <tr>
-              <td><button class="delete-btn" type="button" aria-label="Удалить товар"></button></td>
-              <td><img src="img/product/small/2.png" alt="Клубничный пломбир" width="33" height="33"></td>
-              <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-              <td>1,5кг &#215; 300 руб.</td>
-              <td>450 руб.</td>
-            </tr>
-            <tr>
-              <td colspan="5">Итого: 750 руб.</td>
-            </tr>
-          </table>
-          <a class="btn" href="#">Оформить заказ</a>
+          <div class="cart-dropdown-wrapper">
+            <table class="cart-dropdown">
+              <caption class="visually-hidden">Ваши товары в корзине</caption>
+              <tr>
+                <td><button class="delete-btn" type="button" aria-label="Удалить товар"></button></td>
+                <td><img src="img/product/small/1.png" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
+                <td>Пломбир с апельсиновым джемом</td>
+                <td>1,5кг &#215; <span>200 руб.</span></td>
+                <td>300 руб.</td>
+              </tr>
+              <tr>
+                <td><button class="delete-btn" type="button" aria-label="Удалить товар"></button></td>
+                <td><img src="img/product/small/2.png" alt="Клубничный пломбир" width="33" height="33"></td>
+                <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                <td>1,5кг &#215; <span>300 руб.</span></td>
+                <td>450 руб.</td>
+              </tr>
+              <tr>
+                <td colspan="5">Итого: 750 руб.</td>
+              </tr>
+            </table>
+            <a class="btn" href="#">Оформить заказ</a>
+          </div>
         </div>
       </div>
       <div class="phone">
@@ -117,21 +122,25 @@
           <option value="3">сначадо дорогие</option>
           <option value="4">по жирности</option>
         </select>
-        <p>Цена: 100 руб. - 500 руб.</p>
+        <h3>Цена: <span>100 руб. - 500 руб.</span></h3>
         <label class="visually-hidden" for="filter-form-price">Цена от и до</label>
         <input type="range" name="price" id="filter-form-price" max="1000" min="100" step="100">
         <h3>Жирность:</h3>
-        <input id="fat-1" type="radio" name="fat" value="1" aria-label="Жирность"><label class="fat-label" for="fat-1">0%</label>
-        <input id="fat-2" type="radio" name="fat" value="2" aria-label="Жирность" checked><label class="fat-label" for="fat-2">до 10%</label>
-        <input id="fat-3" type="radio" name="fat" value="3" aria-label="Жирность"><label class="fat-label" for="fat-3">до 30%</label>
-        <input id="fat-4" type="radio" name="fat" value="4" aria-label="Жирность"><label class="fat-label" for="fat-4">выше 30%</label>
+        <div class="fat-wrapper">
+          <input id="fat-1" type="radio" name="fat" value="1" aria-label="Жирность"><label class="fat-label" for="fat-1">0%</label>
+          <input id="fat-2" type="radio" name="fat" value="2" aria-label="Жирность" checked><label class="fat-label" for="fat-2">до 10%</label>
+          <input id="fat-3" type="radio" name="fat" value="3" aria-label="Жирность"><label class="fat-label" for="fat-3">до 30%</label>
+          <input id="fat-4" type="radio" name="fat" value="4" aria-label="Жирность"><label class="fat-label" for="fat-4">выше 30%</label>
+        </div>
         <h3>Наполнители:</h3>
-        <input name="filler" type="checkbox" id="filler-1" value="1" checked><label class="filler-label" for="filler-1">шоколадные</label>
-        <input name="filler" type="checkbox" id="filler-2" value="2" checked><label class="filler-label" for="filler-2">сахарные присыпки</label>
-        <input name="filler" type="checkbox" id="filler-3" value="3"><label class="filler-label" for="filler-3">фрукты</label>
-        <input name="filler" type="checkbox" id="filler-4" value="4"><label class="filler-label" for="filler-4">сиропы</label>
-        <input name="filler" type="checkbox" id="filler-5" value="5"><label class="filler-label" for="filler-5">джемы</label>
-        <button type="submit">Применить</button>
+        <div class="filler-wrapper">
+          <input name="filler" type="checkbox" id="filler-1" value="1" checked><label class="filler-label" for="filler-1">шоколадные</label>
+          <input name="filler" type="checkbox" id="filler-2" value="2" checked><label class="filler-label" for="filler-2">сахарные присыпки</label>
+          <input name="filler" type="checkbox" id="filler-3" value="3"><label class="filler-label" for="filler-3">фрукты</label>
+          <input name="filler" type="checkbox" id="filler-4" value="4"><label class="filler-label" for="filler-4">сиропы</label>
+          <input name="filler" type="checkbox" id="filler-5" value="5"><label class="filler-label" for="filler-5">джемы</label>
+        </div>
+        <button class="filter-btn" type="submit">Применить</button>
       </form>
     </section>
 
@@ -226,7 +235,7 @@
     </ul>
     <div class="designby">
       <img src="img//svg/logo-htmlacademy.svg" alt="HTMLAcademy" width="108" height="39">
-      <p>Сделано в <a href="http://htmlacademy.ru">HTML Academy</a> © 2017</p>
+      <p>Сделано в <a class="htmlacademy-link" href="http://htmlacademy.ru">HTML Academy</a> © 2017</p>
     </div>
     
   </footer>
