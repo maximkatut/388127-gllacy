@@ -1,7 +1,6 @@
 body {
   font-family: "Roboto", "Trebuchet MS", sans-serif;
   font-size: 16px;
-  font-weight: 700;
   line-height: 22px;
   color: #ffffff;
   background-color: #849d8f;
@@ -55,6 +54,7 @@ a {
 }
 
 .main-header-menu  a {
+  font-weight: 700;
   text-decoration: underline;
   text-decoration-color: rgba(255, 255, 255, 0.2);
 }
@@ -67,8 +67,8 @@ a {
 }
 
 .sub-menu a {
-  text-decoration: none;
   font-weight: 400;
+  text-decoration: none;
   color: #323232;
 }
 
@@ -83,39 +83,30 @@ a {
 
 /*---USER BLOCK---*/
 
-.user-block-search .search {
+.user-block-item .search {
   background-color: #f8f7f4;
 }
 
-.user-block-search input {
-  font: inherit;
-  font-weight: 400;
+.user-block-item input {
   font-size: 14px;
-  color: #999999;
+  line-height: 24px;
 }
 
-.user-block-login a,
-.user-block-cart a {
+.user-block-item a {
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
 }
 
-.user-block-login a:hover,
-.user-block-cart a:hover {
+.user-block-item a:hover,
+.user-block-item a:focus {
   color: #323232;
   background-color: #f8f7f4;
 }
 
-.user-block-login .login-form {
+.user-block-item .login-form {
   background-color: #f8f7f4;
 }
-
-.login-form input {
-  font-size: 14px;
-  line-height: 24px;
-}
-
 
 .login-form-bottom .reg-links {
   list-style: none;
@@ -127,7 +118,6 @@ a {
   text-decoration: underline;
   text-decoration-color: rgba(0, 0, 0, 0.3);
   color: #323232;
-  
 }
 
 .reg-links a:hover,
@@ -135,6 +125,10 @@ a {
 .reg-links a:focus {
   color: #e84d37;
   text-decoration-color: rgba(232, 77, 55, 0.3);
+}
+
+.phone p {
+  font-weight: 700;
 }
 
 .phone p:first-child {
@@ -174,6 +168,10 @@ a {
   line-height: 41px;
 }
 
+.promotion-item p {
+  font-weight: 700;
+}
+
 .promotion-item a {
   font-size: 18px;
   line-height: 24px;
@@ -188,6 +186,7 @@ a {
 .offers-item .price {
   font-size: 45px;
   line-height: 45px;
+  font-weight: 700;
 }
 
 .price span {
@@ -219,7 +218,6 @@ a {
 
 .info-list {
   list-style: none;
-  font-weight: 400;
   color: #323232;
 }
 
@@ -249,13 +247,7 @@ a {
 }
 
 .subscription p {
-  font-weight: 400;
   color: #5a5a5a;
-}
-
-.subscription input {
-  font: inherit;
-  font-weight: 400;
 }
 
 /*---MAP---*/
@@ -267,7 +259,6 @@ a {
 .map-feedback-block p {
   font-size: 14px;
   line-height: 20px;
-  font-weight: 400;
   color: #323232;
 }
 
@@ -294,7 +285,6 @@ a {
 .footer-links-item a {
   font-size: 13px;
   line-height: 18px;
-  font-weight: 400;
   text-decoration: underline;
   text-decoration-color: rgba(255, 255, 255, 0.2);
 }
@@ -314,13 +304,13 @@ a {
 .designby p {
   font-size: 12px;
   line-height: 18px;
-  font-weight: 400;
 }
 
 .htmlacademy-link {
   text-decoration: underline;
   text-decoration-color: rgba(255, 255, 255, 0.2);
 }
+
 .htmlacademy-link:hover,
 .htmlacademy-link:focus {
   color: #ffbc9e;
@@ -340,20 +330,9 @@ a {
   color: #323232;
 } 
 
-.feedback-form input {
-  font: inherit;
-  font-weight: 400;
-}
-
-
-
-
 /*===CATALOG.HTML===*/
 
-.main-menu-link.active {
-  background-color: #d07058;
-}
-
+.main-menu-link.active,
 .sub-menu-link.active {
   background-color: #d07058;
 }
@@ -373,7 +352,6 @@ a {
 
 .cart-dropdown {
   font-size: 13px;
-  font-weight: 400;
   color: #323232;
 }
 
@@ -395,7 +373,6 @@ a {
 .breadcrumbs a {
   font-size: 14px;
   line-height: 16px;
-  font-weight: 400;
   text-decoration: underline;
   text-decoration-color: rgba(255, 255, 255, 0.2);
 }
@@ -409,7 +386,6 @@ a {
 .breadcrumbs-current {
   font-size: 14px;
   line-height: 16px;
-  font-weight: 400;
 }
 
 /*---FILTER---*/
@@ -419,20 +395,16 @@ a {
   line-height: 41px;
 }
 
-.filter-form h3 {
+.filter-form h3,
+.filter-form p {
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
 }
 
 .filter-form label {
-  font-size: 16px;
   line-height: 18px;
   font-weight: 500;
-}
-
-.filter-form input {
-  font: inherit;
 }
 
 .fat-wrapper {
@@ -476,6 +448,7 @@ a {
 .catalog-item .price {
   font-size: 45px;
   line-height: 45px;
+  font-weight: 700;
 }
 
 .price span {
@@ -523,12 +496,3 @@ a {
   background-color: #ffffff;
   border-radius: 50%;
 }
-
-
-
-
-
-
-
-
-
