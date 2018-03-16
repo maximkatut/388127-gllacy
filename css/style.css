@@ -3,16 +3,16 @@ body {
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
-  background-color: #849d8f;
-  background-image: url(../img/flash-bg-slide-1.png);
-  background-repeat: no-repeat;
-  background-position: top center;
-  margin-left: 40px;
 }
 
 a {
   text-decoration: none;
   color: #ffffff;
+}
+
+.index-wrapper {
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 .btn {
@@ -156,6 +156,46 @@ a {
   font-size: 32px;
   line-height: 44px;
 }
+
+.slide-one {
+  display: none;
+}
+
+.slide-two {
+  display: none;
+}
+
+.slide-three {
+  display: none;
+}
+
+.switch-one:checked ~ .index-wrapper {
+  background-color: #849d8f;
+  background-image: url(../img/flash-bg-slide-1.png);
+}
+
+.switch-one:checked ~ .index-wrapper .slide-one {
+  display: block;
+}
+
+.switch-two:checked ~ .index-wrapper {
+  background-color: #8996a6;
+  background-image: url(../img/flash-bg-slide-2.png);
+}
+
+.switch-two:checked ~ .index-wrapper .slide-two {
+  display: block;
+}
+
+.switch-three:checked ~ .index-wrapper {
+  background-color: #9d8b84;
+  background-image: url(../img/flash-bg-slide-3.png);
+}
+
+.switch-three:checked ~ .index-wrapper .slide-three {
+  display: block;
+}
+
 
 /*---PROMOTION---*/
 
