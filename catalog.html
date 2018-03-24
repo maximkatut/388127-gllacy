@@ -9,90 +9,88 @@
 </head>
 <body>
 
-  <header class="main-header row">
-    <div class="wrapper col">
-      <nav class="main-navigation">
-        <a href="index.html" class="main-header-logo">
-          <img class="logo" src="img/svg/logo.svg" width="154" height="64" alt="Глейси лого">
-        </a>
-        <ul class="main-header-menu">
-          <li class="main-menu-item main-menu-catalog">
-            <a class="main-menu-link active">Каталог</a>
-            <ul class="sub-menu">
-              <li class="sub-menu-item">
-                <a class="sub-menu-link" href="#1">Новинки</a>
-              </li>
-              <li class="sub-menu-item">
-                <a class="sub-menu-link active">Сливочное</a>
-              </li>
-              <li class="sub-menu-item">
-                <a class="sub-menu-link" href="#3">Щербеты</a>
-              </li>
-              <li class="sub-menu-item">
-                <a class="sub-menu-link" href="#4">Фруктовый лед</a>
-              </li>
-              <li class="sub-menu-item">
-                <a class="sub-menu-link" href="#5">Мелорин</a>
-              </li>
+  <header class="main-header">
+    <nav class="main-navigation">
+      <a href="index.html" class="main-header-logo">
+        <img class="logo" src="img/svg/logo.svg" width="154" height="64" alt="Глейси лого">
+      </a>
+      <ul class="main-header-menu">
+        <li class="main-menu-item main-menu-catalog">
+          <a class="main-menu-link active">Каталог</a>
+          <ul class="sub-menu">
+            <li class="sub-menu-item">
+              <a class="sub-menu-link" href="#1">Новинки</a>
+            </li>
+            <li class="sub-menu-item">
+              <a class="sub-menu-link active">Сливочное</a>
+            </li>
+            <li class="sub-menu-item">
+              <a class="sub-menu-link" href="#3">Щербеты</a>
+            </li>
+            <li class="sub-menu-item">
+              <a class="sub-menu-link" href="#4">Фруктовый лед</a>
+            </li>
+            <li class="sub-menu-item">
+              <a class="sub-menu-link" href="#5">Мелорин</a>
+            </li>
+          </ul>
+        </li>
+        <li class="main-menu-item">
+          <a class="main-menu-link" href="#delivery">Доставка и оплата</a>
+        </li>
+        <li class="main-menu-item">
+          <a class="main-menu-link" href="#about-us">О Компании</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="user-block">
+      <div class="user-block-item user-block-search">
+        <a class="search-btn" href="#" aria-label="Поиск"></a>
+        <form class="search">
+          <label class="visually-hidden" for="user-block-search">Поиск по сайту</label>
+          <input type="search" id="user-block-search" placeholder="Что ищем?">
+        </form>
+      </div>
+      <div class="user-block-item user-block-login">
+        <a class="login-btn" href="#">Вход</a>
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="login-form-email">Электронная почта (обязательно)</label>
+          <input type="email" name="email" id="login-form-email" placeholder="Электронная почта" aria-required="true" required>
+          <label class="visually-hidden" for="login-form-password">Пароль (обязательно)</label>
+          <input type="password" name="password" id="login-form-password" placeholder="Пароль" aria-required="true" required>
+          <div class="login-form-bottom">
+            <button class="btn" type="submit">Войти</button>
+            <ul class="reg-links">
+              <li><a href="#">Забыли пароль?</a></li>
+              <li><a href="#">Новая регистрация</a></li>
             </ul>
-          </li>
-          <li class="main-menu-item">
-            <a class="main-menu-link" href="#delivery">Доставка и оплата</a>
-          </li>
-          <li class="main-menu-item">
-            <a class="main-menu-link" href="#about-us">О Компании</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="user-block">
-        <div class="user-block-item user-block-search">
-          <a class="search-btn" href="#" aria-label="Поиск"></a>
-          <form class="search">
-            <label class="visually-hidden" for="user-block-search">Поиск по сайту</label>
-            <input type="search" id="user-block-search" placeholder="Что ищем?">
-          </form>
-        </div>
-        <div class="user-block-item user-block-login">
-          <a class="login-btn" href="#">Вход</a>
-          <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-            <label class="visually-hidden" for="login-form-email">Электронная почта (обязательно)</label>
-            <input type="email" name="email" id="login-form-email" placeholder="Электронная почта" aria-required="true" required>
-            <label class="visually-hidden" for="login-form-password">Пароль (обязательно)</label>
-            <input type="password" name="password" id="login-form-password" placeholder="Пароль" aria-required="true" required>
-            <div class="login-form-bottom">
-              <button class="btn" type="submit">Войти</button>
-              <ul class="reg-links">
-                <li><a href="#">Забыли пароль?</a></li>
-                <li><a href="#">Новая регистрация</a></li>
-              </ul>
-            </div>
-          </form>
-        </div>
-        <div class="user-block-item user-block-cart">
-          <a class="cart-btn full" href="#" aria-label="Корзина">2 товара</a>
-          <div class="cart-dropdown-wrapper">
-            <table class="cart-dropdown">
-              <caption class="visually-hidden">Ваши товары в корзине</caption>
-              <tr class="table-row">
-                <td><button class="delete-btn" type="button" aria-label="Удалить товар"></button></td>
-                <td><img src="img/product/small/1.png" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
-                <td class="item-name">Пломбир с апельсиновым джемом</td>
-                <td>1,5кг &#215; <span>200 руб.</span></td>
-                <td>300 руб.</td>
-              </tr>
-              <tr class="table-row">
-                <td><button class="delete-btn" type="button" aria-label="Удалить товар"></button></td>
-                <td><img src="img/product/small/2.png" alt="Клубничный пломбир" width="33" height="33"></td>
-                <td class="item-name">Клубничный пломбир с присыпкой из белого шоколада</td>
-                <td>1,5кг &#215; <span>300 руб.</span></td>
-                <td>450 руб.</td>
-              </tr>
-              <tr>
-                <td class="summary" colspan="5">Итого: 750 руб.</td>
-              </tr>
-            </table>
-            <a class="btn" href="#">Оформить заказ</a>
           </div>
+        </form>
+      </div>
+      <div class="user-block-item user-block-cart">
+        <a class="cart-btn full" href="#" aria-label="Корзина">2 товара</a>
+        <div class="cart-dropdown-wrapper">
+          <table class="cart-dropdown">
+            <caption class="visually-hidden">Ваши товары в корзине</caption>
+            <tr class="table-row">
+              <td><button class="delete-btn" type="button" aria-label="Удалить товар"></button></td>
+              <td><img src="img/product/small/1.png" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
+              <td class="item-name">Пломбир с апельсиновым джемом</td>
+              <td>1,5кг &#215; <span>200 руб.</span></td>
+              <td>300 руб.</td>
+            </tr>
+            <tr class="table-row">
+              <td><button class="delete-btn" type="button" aria-label="Удалить товар"></button></td>
+              <td><img src="img/product/small/2.png" alt="Клубничный пломбир" width="33" height="33"></td>
+              <td class="item-name">Клубничный пломбир с присыпкой из белого шоколада</td>
+              <td>1,5кг &#215; <span>300 руб.</span></td>
+              <td>450 руб.</td>
+            </tr>
+            <tr>
+              <td class="summary" colspan="5">Итого: 750 руб.</td>
+            </tr>
+          </table>
+          <a class="btn" href="#">Оформить заказ</a>
         </div>
       </div>
     </div>
@@ -105,16 +103,16 @@
     
   <main class="container-catalog">
     <div class="row">
-      <ul class="breadcrumbs col">
+      <ul class="breadcrumbs">
         <li><a href="index.html">Главная</a></li>
         <li><a href="#">Каталог</a></li>
         <li class="breadcrumbs-current">Сливочное</li>
       </ul>
-      <h1 class="col">Сливочное мороженое</h1>
+      <h1>Сливочное мороженое</h1>
     </div>
     <section class="filter row">
       <h2 class="visually-hidden">Фильтры</h2>
-      <form class="filter-form col" action="https://echo.htmlacademy.ru" method="post">
+      <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
         <h3>Сортировка:</h3>
         <label class="visually-hidden" for="filter-form-sort">Сортировать:</label>
         <select name="filter-form-sort" id="filter-form-sort">
