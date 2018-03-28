@@ -259,6 +259,18 @@ a {
   border-radius: 6px;
 }
 
+.search input:hover,
+.login-form input:hover {
+  box-shadow: 0 0 0 2px #d3d3d2;
+}
+
+.search input:focus,
+.login-form input:focus {
+  box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+  border: 1px solid rgba(46, 136, 228, 0.52);
+  outline: none;
+}
+
 .user-block-search .search-btn {
   padding: 0;
   width: 32px;
@@ -900,6 +912,16 @@ a {
   border-radius: 6px;
 }
 
+.subscription-form input:hover {
+  box-shadow: 0 0 0 2px #d3d3d2;
+}
+
+.subscription-form input:focus {
+  box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+  border: 1px solid rgba(46, 136, 228, 0.52);
+  outline: none;
+}
+
 .subscription-form button {
   margin-right: 5px;
   padding: 10px 20px;
@@ -1109,17 +1131,133 @@ a {
 
 /*---FEEDBACK FORM---*/
 
-.modal-feedback {
+.bg-black {
   display: none;
-  background-color: #f8f7f4;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9;
 }
 
-.modal-feedback h2{
+.bg-show {
+  display: block;
+}
+
+.modal-feedback {
+  position: fixed;
+  top: 0;
+  left: calc(50vw - 477px/2);
+  display: none;
+  width: 477px;
+  margin-top: 20vh;
+  padding: 16px 24px 25px 24px;
+  background-color: #f8f7f4;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.modal-feedback h2 {
+  margin: 0;
+  margin-bottom: 18px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 500;
   color: #323232;
 } 
+
+.feedback-form input {
+  width: 63%;
+  margin-bottom: 18px;
+  padding: 13px 15px;
+  border: 1px solid #d3d3d2;
+  border-radius: 6px;
+}
+
+.feedback-form textarea {
+  width: 100%;
+  margin-bottom: 21px;
+  padding: 13px 15px;
+  border: 1px solid #d3d3d2;
+  border-radius: 6px;
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  box-shadow: 0 0 0 2px #d3d3d2;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+  border: 1px solid rgba(46, 136, 228, 0.52);
+  outline: none;
+}
+
+.feedback-form .btn {
+  padding: 11px 23px;
+  float: right;
+}
+
+.modal-feedback .modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.modal-close::after {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 18px;
+  height: 17px;
+  background-image: url(../img/svg/cross-big.svg);
+  background-repeat: no-repeat;
+}
+
+.modal-close:active::after {
+  top: 4px;
+  left: 4px;
+  width: 11px;
+  height: 12px;
+  background-image: url(../img/svg/cross-small.svg);
+}
+
+.modal-show {
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(-2000px); }
+  70% { transform: translateY(30px); }
+  90% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
+
+.message {
+  color: #e94f38;
+}
 
 /*===CATALOG.HTML===*/
 
