@@ -55,4 +55,5 @@ function closePopup() {
   popup.classList.remove("modal-show");
   popup.classList.remove("modal-error");
   bg.classList.remove("bg-show");
+  message.innerHTML = "";
 }
