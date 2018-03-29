@@ -2,11 +2,11 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=EmulateIE9">
   <title>HTML Academy: Глейси</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/google-map.js"></script>
 </head>
 <body>
   <input class="visually-hidden" id="switch-one" type="radio" name="slides" checked>
@@ -204,7 +204,9 @@
 
       <section class="map-section">
         <h2 class="visually-hidden">Наше месторасположение</h2>
-        <div class="map"></div>
+        <div class="map">
+          <div class="map-bg"></div>
+        </div>
         <div class="map-feedback-block-wrapper">
           <div class="map-feedback-block">
             <div class="adress"> 
@@ -216,7 +218,7 @@
               <a class="bold" href="tel:88124502525">8 812 450-25-25</a>
               <p>(с 10 до 20 ежедневно)</p>
             </div>
-            <a class="btn" href="#">Форма обратной связи</a>
+            <a class="btn feedback-btn" href="#">Форма обратной связи</a>
           </div>
         </div>
       </section>
@@ -270,22 +272,28 @@
 
     <!-- Форма обратной связи -->
 
-    <section class="modal modal-feedback">
-      <h2>Мы обязательно вам ответим!</h2>
-      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <label class="visually-hidden" for="feedback-form-name">Как вас зовут?</label>
-        <input type="text" id="feedback-form-name" name="text" placeholder="Как вас зовут?">
-        <label class="visually-hidden" for="feedback-form-email">Ваша почта для ответа?</label>
-        <input type="email" id="feedback-form-email" name="email" placeholder="Ваша почта для ответа?" aria-required="true" required>
-        <label class="visually-hidden" for="feedback-form-question">Напишите что-нибудь...</label>
-        <textarea name="textarea" id="feedback-form-question" cols="30" rows="10" placeholder="Напишите что-нибудь..." aria-required="true" required></textarea>
-        <button class="btn" type="submit">Отправить</button>
-      </form>
-      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    <section class="modal">
+      <div class="modal-feedback">
+        <h2>Мы обязательно вам ответим!</h2>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="feedback-form-name">Как вас зовут?</label>
+          <input type="text" id="feedback-form-name" name="text" placeholder="Как вас зовут?" required>
+          <label class="visually-hidden" for="feedback-form-email">Ваша почта для ответа?</label>
+          <input type="email" id="feedback-form-email" name="email" placeholder="Ваша почта для ответа?" aria-required="true" required>
+          <label class="visually-hidden" for="feedback-form-question">Напишите что-нибудь...</label>
+          <textarea name="textarea" id="feedback-form-question" cols="30" rows="7" placeholder="Напишите что-нибудь..." aria-required="true"></textarea>
+          <button class="btn" type="submit">Отправить</button>
+        </form>
+        <p class="message"></p>
+        <button class="modal-close" type="button" aria-label="Закрыть">x</button>
+      </div>
+      <div class="bg-black"></div>
     </section>
   </div>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-DxiFiCml0-hKT7CWwMz-kK5lfPJ7Ifg&callback=initMap">
   </script>
+  <script src="js/google-map.js"></script>
+  <script src="js/popup.js"></script>
 </body>
 </html>
