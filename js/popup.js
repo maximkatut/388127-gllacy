@@ -7,12 +7,21 @@ var question = document.querySelector("#feedback-form-question");
 var form = popup.querySelector("form");
 var bg = document.querySelector(".bg-black");
 var message = document.querySelector(".message");
+var storageLogin = localStorage.getItem("login");
+var storageEmail = localStorage.getItem("email");
+var escKey = 27;
 
 feedbackBtn.addEventListener("click", function(evt) {
   evt.preventDefault();
   popup.classList.add("modal-show");
   bg.classList.add("bg-show");
   login.focus();
+  if (storageLogin) {
+    login.value = storageLogin;
+  }
+  if (storageEmail) {
+    email.value = storageEmail;
+  }
 });
 
 closeBtn.addEventListener("click", function(evt) {
@@ -38,12 +47,13 @@ form.addEventListener("submit", function (evt) {
       message.innerHTML = "Задайте вопрос!";
     }
   } else {
-    return true;
+    localStorage.setItem("login", login.value);
+    localStorage.setItem("email", email.value);
   } 
 });
 
 window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
+  if (evt.keyCode === escKey) {
     evt.preventDefault();
     if (popup.classList.contains("modal-show")) {
       closePopup();
