@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <input class="visually-hidden" id="switch-one" type="radio" name="slides" checked>
-  <input class="visually-hidden" id="switch-two" type="radio" name="slides">
-  <input class="visually-hidden" id="switch-three" type="radio" name="slides">
+  <input id="switch-one" type="radio" name="slides" checked>
+  <input id="switch-two" type="radio" name="slides">
+  <input id="switch-three" type="radio" name="slides">
   <div class="index-wrapper">
     <header class="main-header">
       <nav class="main-navigation">
@@ -19,24 +19,24 @@
         </a>
         <ul class="main-header-menu">
           <li class="main-menu-item main-menu-catalog">
-            <a class="main-menu-link" href="#">Каталог</a>
-              <ul class="sub-menu">
-                <li class="sub-menu-item">
-                  <a class="sub-menu-link" href="#1">Новинки</a>
-                </li>
-                <li class="sub-menu-item">
-                  <a class="sub-menu-link" href="catalog.html">Сливочное</a>
-                </li>
-                <li class="sub-menu-item">
-                  <a class="sub-menu-link" href="#3">Щербеты</a>
-                </li>
-                <li class="sub-menu-item">
-                  <a class="sub-menu-link" href="#4">Фруктовый лед</a>
-                </li>
-                <li class="sub-menu-item">
-                  <a class="sub-menu-link" href="#5">Мелорин</a>
-                </li>
-              </ul>
+            <a class="main-menu-link catalog-link" href="#">Каталог</a>
+            <ul class="sub-menu">
+              <li class="sub-menu-item">
+                <a class="sub-menu-link" href="#1">Новинки</a>
+              </li>
+              <li class="sub-menu-item">
+                <a class="sub-menu-link" href="catalog.html">Сливочное</a>
+              </li>
+              <li class="sub-menu-item">
+                <a class="sub-menu-link" href="#3">Щербеты</a>
+              </li>
+              <li class="sub-menu-item">
+                <a class="sub-menu-link" href="#4">Фруктовый лед</a>
+              </li>
+              <li class="sub-menu-item">
+                <a class="sub-menu-link" href="#5">Мелорин</a>
+              </li>
+            </ul>
           </li>
           <li class="main-menu-item">
             <a class="main-menu-link" href="#delivery">Доставка и оплата</a>
@@ -200,29 +200,28 @@
           </div>
         </div>
       </section>
-
-      <section class="map-section">
-        <h2 class="visually-hidden">Наше месторасположение</h2>
-        <div class="map">
-          <div class="map-bg"></div>
-        </div>
-        <div class="map-feedback-block-wrapper">
-          <div class="map-feedback-block">
-            <div class="adress"> 
-              <p>Адрес главного офиса<br> и офлайн-магазина:</p>
-              <p class="bold">ул. Большая Конюшенная<br> 19/8, Санкт-Петербург</p>
-            </div>
-            <div class="phone-number">
-              <p>Для заказов по телефону:</p>
-              <a class="bold" href="tel:88124502525">8 812 450-25-25</a>
-              <p>(с 10 до 20 ежедневно)</p>
-            </div>
-            <a class="btn feedback-btn" href="#">Форма обратной связи</a>
-          </div>
-        </div>
-      </section>
-
     </main>
+
+    <section class="map-section">
+      <h2 class="visually-hidden">Наше месторасположение</h2>
+      <div class="map">
+        <div class="map-bg"><img src="img/map.jpg" alt="Карта нашего месторасположения" width="1200" height="430"></div>
+      </div>
+      <div class="map-feedback-block-wrapper">
+        <div class="map-feedback-block">
+          <div class="adress"> 
+            <p>Адрес главного офиса<br> и офлайн-магазина:</p>
+            <p class="bold">ул. Большая Конюшенная<br> 19/8, Санкт-Петербург</p>
+          </div>
+          <div class="phone-number">
+            <p>Для заказов по телефону:</p>
+            <a class="bold" href="tel:88124502525">8 812 450-25-25</a>
+            <p>(с 10 до 20 ежедневно)</p>
+          </div>
+          <a class="btn feedback-btn" href="feedback.html">Форма обратной связи</a>
+        </div>
+      </div>
+    </section>
 
     <footer class="footer">
       <div class="footer-wrapper row">
