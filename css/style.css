@@ -574,7 +574,22 @@ a {
 #switch-one,
 #switch-two,
 #switch-three {
-  display: none;
+  position: absolute;
+  top: 560px;
+  left: 160px;
+  opacity: 0;
+  width: 0;
+}
+
+#switch-one:focus ~ .index-wrapper .slider-controls,
+#switch-two:focus ~ .index-wrapper .slider-controls,
+#switch-three:focus ~ .index-wrapper .slider-controls {
+  -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.label-dot:focus {
+  border: 1px solid red;
 }
 
 #switch-one:checked ~ .index-wrapper {
@@ -618,12 +633,18 @@ a {
 
 .slider-controls {
   position: absolute;
+  padding: 0px 5px;
+  border-radius: 15px;
   top: 563px;
 }
 
 .label-dot {
   margin-right: 30px;
   cursor: pointer;
+}
+
+.label-dot:last-child {
+  margin-right: 20px;
 }
 
 .label-dot:hover::after {
